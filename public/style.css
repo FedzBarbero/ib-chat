@@ -1,0 +1,50 @@
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column
+}
+
+main {
+  flex: 1 0 auto;
+  background-color: #F5F9FD
+}
+
+#messages {
+  overflow: auto
+}
+
+.footer-copyright {
+  border-top: 10px solid #1976d2
+}
+
+.s11 {
+  border-left: 8%
+}
+
+.message-box1, .message-box2 {
+  font-size: 24px;
+  border-radius: 5px;
+  display: inline-block;
+  padding: 5px;
+  margin: 5px
+}
+/*
+.message-box1 {
+  background-color: #FFF
+}
+
+.message-box2 {
+  background-color: #6295CD
+}
+*/
+.log-box {
+  font-size: 18px;
+  color: gray;
+  text-align: center
+}
+
+.message {
+  color: white;
+  margin-top: 5px !important;
+  margin-bottom: 5px !important
+}

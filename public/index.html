@@ -1,0 +1,71 @@
+<!doctype html>
+<html ng-app>
+  <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+      <title>IB Chat</title>
+
+      <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css">
+
+      <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body>
+
+    <div id="profile-settings" class="modal">
+      <div class="modal-content">
+        <label>Name:</label>
+        <input type="text" ng-model="yourName" maxlength="10" placeholder="Enter your name here">
+
+        <label>Description:</label>
+        <input type="text" ng-model="desc" placeholder="A little something about (subjects, graduation year, etc.)" maxlength="50">
+
+      </div>
+      <div class="modal-footer">
+        <p class="center-align"><b>All messages will be saved (only messages, no names or descriptions) as they will be later used for machine learning.</b></p>
+        <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Done</a>
+      </div>
+    </div>
+
+    <nav class="blue darken-1">
+      <div class="nav-wrapper container">
+        <a href="#" class="brand-logo">IB Chat</a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+          <li><a href="#" ng-bind="yourName" id="name-of-user"></a></li>
+          <li><a href="#" ng-bind="desc" id="description-of-user"></a></li>
+          <li><a class="waves-effect waves-light btn" href="#profile-settings"><i class="material-icons">settings</i></a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <main>
+        <ul id="messages"></ul>
+    </main>
+
+    <footer class="page-footer" style="background-color: #F5F9FD">
+
+      <div class="row center-align" style="background-color: #F5F9FD">
+        <div class="input-field col s11">
+          <input id="message" type="text" class="validate">
+          <label class="active" for="message">Type your message...</label>
+        </div>
+      </div>
+
+        <div class="footer-copyright  blue darken-1">
+            <div class="container">
+                <span class="white-text">Made with &#10084; by Federico Barbero</span>
+                <a class="white-text text-lighten-4 right" id="online-count" href="#"></a>
+            </div>
+        </div>
+      </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.7.3/socket.io.js"></script>
+  <script src="https://code.jquery.com/jquery-3.2.0.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+
+  <script src="main.js"></script>
+  <script src="/socket.io/socket.io.js"></script>
+  </body>
