@@ -11,9 +11,7 @@ neural network.
 Hopefully this will also count as CAS. 
 
 # Languages/frameworks used
-HTML
-CSS (materialize)
-JavaScript (node, angular and jQuery)
+HTML, CSS (materialize), JavaScript (node, angular and jQuery)
 
 # About me
 I'm in the class of 2018, taking HL: Maths, Phys and Lang B,
